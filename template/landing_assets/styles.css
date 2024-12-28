@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 html {
     scroll-behavior: smooth;
 }
@@ -6,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    
 }
 * {
     margin: 0;
@@ -14,6 +12,49 @@ body {
     box-sizing: border-box;
     font-family: 'Archivo', system-ui;
 }
+
+
+#loader {
+    display: none;
+    /* width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.25s; */
+}
+#loader.hide {
+    opacity: 0;
+}
+#loader.remove {
+    display: none;
+}
+.loader {
+    /* width: 100px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #ffffff;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear; */
+}
+@keyframes l3 {
+    to{transform: rotate(1turn)}
+}
+
+
 #left {
     height: 100vh;
     background-color: rgba(0,0,0,1);
@@ -25,7 +66,22 @@ body {
     width: 100vw;
     position: relative;
     height: 100vh;
-    
+    display: flex;
+    flex-wrap: wrap;
+}
+#main>.item {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 0;
+    flex: 0 0 auto;
+}
+@media screen and (min-width: 768px) {
+    #main>.item:not(.item.full) {
+        width: 50%;
+    }
 }
 
 
@@ -46,7 +102,7 @@ body {
 }
 #left .warning.active {
     opacity: 1;
-    z-index: 999;
+    z-index: 9;
 }
 #left .fill {
     height: 100vh;
@@ -74,7 +130,7 @@ body {
 }
 #contentwrapper {
     position: absolute;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -89,13 +145,16 @@ nav#menu {
     position: fixed;
     right: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9;
 
     /* From https://css.glass */
     background: rgba(0, 0, 0, 0);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+nav#menu.hidden {
+    display: none;
 }
 nav#menu>.menulist {
     display: flex;
@@ -132,11 +191,12 @@ nav#menu>.menulist .item.active p {
     max-width: 100px;
 }
 @media screen and (min-width: 768px) {
-    #right {
+    body.chrome #right {
         scroll-snap-type: y mandatory;
     }
     #contentwrapper {
         width: 50%;
+        left: 50%;
     }
     nav#menu {
         width: 50%;
@@ -152,25 +212,30 @@ nav#menu>.menulist .item.active p {
 
 #contentwrapper>section#top {
     background: rgba(28,38,82,0);
-    background: linear-gradient(0deg, rgba(28,38,82,1) 300px, rgba(28,38,82,0) 400px);
+    background: linear-gradient(0deg, rgba(28,38,82,1) 220px, rgba(28,38,82,0) 300px);
     color: rgba(255,255,255,1);
+
+    min-height: 100vh;
+    min-height: 100dvh;
 }
-/* #contentwrapper>section#top .warning#phonewarning {
+#contentwrapper>section#top .warning {
     color: rgba(255,255,255,1);
     background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    bottom: 350px;
-    width: 250px;
+    position: absolute; 
     font-size: 20px;
     line-height: 28px;
-    padding: 10px 20px;
+    padding: 10px 20px;   
+}
+#contentwrapper>section#top .warning#nojswarning {
+    bottom: 350px;
+    width: 250px;
     left: 0;
     right: 0;
     margin: auto;
-} */
+}
 #contentwrapper>section#top .texts {
     position: absolute;
-    bottom: 140px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -189,16 +254,18 @@ nav#menu>.menulist .item.active p {
     margin-left: 15px;
     font-size: 28px;
 }
-#contentwrapper>section#top p.whatami {
+#contentwrapper>section#top p.shuffle {
     font-size: 25px;
     font-weight: 300;
     margin-top: 20px;
     white-space: nowrap;
+    min-width: 275px;
 }
-#contentwrapper>section#top p.whatami>.prefix {
+#contentwrapper>section#top p.shuffle>.prefix {
     display: inline-block;
+    opacity: 0;
 }
-#contentwrapper>section#top p.whatami>.spins {
+#contentwrapper>section#top p.shuffle>.spins {
     font-style: italic;
     font-weight: 700;
     text-decoration: underline;
@@ -206,9 +273,9 @@ nav#menu>.menulist .item.active p {
     opacity: 0;
     transition: opacity 0.3s ease;
     display: inline-block;
-    min-width: 250px;
 }
-#contentwrapper>section#top p.whatami>.spins.active {
+#contentwrapper>section#top p.shuffle>.spins.active,
+#contentwrapper>section#top p.shuffle>.prefix.active {
     opacity: 1;
 }
 #contentwrapper>section#top p.inst {
@@ -216,7 +283,7 @@ nav#menu>.menulist .item.active p {
     bottom: 25px;
     left: 0;
     text-align: center;
-    display: block;
+    display: none;
     width: 100%;
     text-transform: uppercase;
     font-weight: 300;
@@ -228,7 +295,7 @@ nav#menu>.menulist .item.active p {
     #contentwrapper>section#top h2 {
         font-size: 50px;
     }
-    #contentwrapper>section#top p.whatami {
+    #contentwrapper>section#top p.shuffle {
         font-size: 35px;
     }
     #contentwrapper>section#top .texts { 
@@ -237,8 +304,12 @@ nav#menu>.menulist .item.active p {
         bottom: auto;
         transform: translateY(-50%);
     }
-    #contentwrapper>section#top .warning#phonewarning {
-        display: none;
+    #contentwrapper>section#top .warning#nojswarning {
+        width: 90%;
+        bottom: 75px;
+    }
+    #contentwrapper>section#top p.inst {
+        display: block;
     }
 }
 
@@ -429,6 +500,8 @@ nav#menu>.menulist .item.active p {
     font-size: 20px;
     line-height: 25px;
     max-height: 0;
+}
+#contentwrapper>section#skills .item .desc.loaded {
     transition: max-height 0.5s ease;
 }
 #contentwrapper>section#skills .item.active .desc {
@@ -508,6 +581,7 @@ nav#menu>.menulist .item.active p {
 #contentwrapper>section#interests .langprof {
     font-size: 20px;
     font-style: italic;
+    display: none;
 }
 #contentwrapper>section#interests .languages {
     border-collapse: collapse;
@@ -525,6 +599,9 @@ nav#menu>.menulist .item.active p {
 @media screen and (min-width: 768px) {
     #contentwrapper>section#interests {
         background-color: rgba(116,142,99,1);
+    }
+    #contentwrapper>section#interests .langprof {
+        display: table-cell;
     }
 }
 

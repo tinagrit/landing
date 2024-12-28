@@ -4,53 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mu Leelawat</title>
-    <link rel="stylesheet" href="/template/landing_assets/tlib.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/template/landing_assets/styles.css">
+
+    <meta name="robots" content="noindex">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/template/landing_assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/template/landing_assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/template/landing_assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/template/landing_assets/images/favicon/site.webmanifest">
+
+    <meta name="title" content="Mu Leelawat" />
+    <meta name="description" content="homenometa" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tinagrit.com" />
+    <meta property="og:title" content="Mu Leelawat" />
+    <meta property="og:description" content="homenometa" />
+    <meta property="og:image" content="https://beta.tinagrit.com/homenometa/homenometa.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tinagrit.com" />
+    <meta property="twitter:title" content="Mu Leelawat" />
+    <meta property="twitter:description" content="homenometa" />
+    <meta property="twitter:image" content="https://beta.tinagrit.com/homenometa/homenometa.png" />
+
+    <meta name="keywords" content="tinagrit,mu,leelawat,personal website,computer science,portfolio">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Mu Leelawat">
+    <meta name="copyright" content="muleelawat 2025">
 </head>
 <body>
-    <div id="main" class="row">
-        <div id="left" class="col-md-6">
-            <!-- <div id="leftscrollwarning" class="warning"><p>Please scroll on the right, where the contents are.</p></div> -->
-            <img class="fill" data-for="5" style="object-position: 30% 50%;" src="https://ucarecdn.com/d854404c-6a7d-4790-bc6b-1e394e982eda/pic5.jpg" alt="Mu Leelawat">
-            <img class="fill" data-for="4" style="object-position: 0 20%;" src="https://ucarecdn.com/9e917802-ec23-45a5-b219-8cbdc3323813/pic4.jpg" alt="Mu Leelawat">
-            <img class="fill" data-for="3" style="object-position: 0 20%;" src="https://ucarecdn.com/d2624b7e-07b6-466d-bb63-87758bfefcbb/pic3.png" alt="Mu Leelawat">
-            <img class="fill" data-for="2" style="object-position: 50% 0;" src="https://ucarecdn.com/d5adcbb1-2fab-4da8-9ced-11bda8284b2e/pic2.png" alt="Mu Leelawat">
-            <img class="fill active" data-for="1" style="object-position: 50% 15%;" src="https://ucarecdn.com/17ba0d07-7143-48e3-a1ea-d842bfbeb98e/pic1.jpg" alt="Mu Leelawat">
+    <div id="loader">
+        <div class="loader"></div>
+    </div>
+    <div id="main">
+        <div id="left" class="item">
+            <img class="fill" data-for="5" style="object-position: 30% 50%;" src="/template/landing_assets/images/avif/pic5.avif" alt="Mu Leelawat">
+            <img class="fill" data-for="4" style="object-position: 0 20%;" src="/template/landing_assets/images/avif/pic4.avif" alt="Mu Leelawat">
+            <img class="fill" data-for="3" style="object-position: 50% 0;" src="/template/landing_assets/images/avif/pic3.avif" alt="Mu Leelawat">
+            <img class="fill" data-for="2" style="object-position: 0 20%;" src="/template/landing_assets/images/avif/pic2.avif" alt="Mu Leelawat">
+            <img class="fill active" data-for="1" style="object-position: 50% 30%;" src="/template/landing_assets/images/avif/pic1.avif" alt="Mu Leelawat">
         </div>
-        <div id="right">
-            <div id="contentwrapper" class="col-md-6">
-                <nav id="menu">
+        <div id="right" class="item full">
+            <div id="contentwrapper">
+                <nav id="menu" class="hidden">
                     <div class="menulist">
                         <div class="item" onclick="goTo(2)">
-                            <img src="https://ucarecdn.com/fe23a178-f245-4d50-b3dc-52405e67edee/user.png" alt="About">
+                            <img src="/template/landing_assets/images/avif/icons/user.avif" alt="About">
                             <p>About</p>
                         </div>
                         <div class="item" onclick="goTo(3)">
-                            <img src="https://ucarecdn.com/3cf779d8-0110-4072-94d8-005ae3318935/brain.png" alt="Skills">
+                            <img src="/template/landing_assets/images/avif/icons/brain.avif" alt="Skills">
                             <p>Skills</p>
                         </div>
                         <div class="item" onclick="goTo(4)">
-                            <img src="https://ucarecdn.com/793dd357-12e5-4a16-80da-666d13c72718/star.png" alt="Interests">
+                            <img src="/template/landing_assets/images/avif/icons/star.avif" alt="Interests">
                             <p>Interests</p>
                         </div>
                         <div class="item" onclick="goTo(5)">
-                            <img src="https://ucarecdn.com/bb2a84ac-21e2-4a54-8ae1-915c8783b10d/phonefill.png" alt="Contact">
+                            <img src="/template/landing_assets/images/avif/icons/phone-fill.avif" alt="Contact">
                             <p>Contact</p>
                         </div>
                     </div>
                 </nav>
-                <section id="top">            
-                    <!-- <div id="phonewarning" class="warning"><p>This page has not been fully optimized for phone screens. Some features may not work properly.</p></div> -->
+                <section id="top">
+                    <noscript>
+                        <div id="nojswarning" class="warning"><p>JavaScript is disabled or unsupported on your browser. You may not be able to view this page properly.</p></div>
+                    </noscript>            
                     <div class="texts">
                         <h1 class="first">Mu</h1>
                         <p class="pron"><em>(he/him)</em></p>
                         <h2 class="last">Leelawat,</h2>
-                        <p class="whatami"><span class="prefix">a</span><span class="spins">web developer</span></p>
+                        <p class="shuffle"><span class="prefix">a</span><span class="spins">web developer</span></p>
                     </div>
                     <p class="inst">Scroll down to learn more</p>
                 </section>
@@ -60,7 +91,7 @@
                         <div class="separator"></div>
                         <div class="school">
                             <div class="centre">
-                                <img class="imgtitle" src="https://ucarecdn.com/35479b79-a184-4f5e-b5c2-cd5085e2d1e8/grad.png" alt="Graduation">
+                                <img class="imgtitle" src="/template/landing_assets/images/avif/icons/grad.avif" alt="Graduation">
                                 <div class="title">
                                     <h3>Bachelor’s of Science</h3>
                                     <p class="subtitle"><span>Simon Fraser University</span></p>
@@ -82,7 +113,7 @@
                             </div>
                             
                             <!-- <div class="centre">
-                                <img class="imgtitle" src="https://ucarecdn.com/35479b79-a184-4f5e-b5c2-cd5085e2d1e8/grad.png" alt="Graduation">
+                                <img class="imgtitle" src="/template/landing_assets/images/avif/icons/grad.avif" alt="Graduation">
                                 <div class="title">
                                     <p class="label">High School</p>
                                     <h3>BC Dogwood Diploma</h3>
@@ -112,10 +143,10 @@
                 <section id="skills">
                     <div class="centre">
                         <h3>Soft Skills</h3>
-                        <div class="item" onclick="toggleExpander(this,document.getElementById('skills'));">
+                        <div class="item active" onclick="toggleExpander(this,document.getElementById('skills'));">
                             <div class="title">
-                                <img src="https://ucarecdn.com/a063a4e9-ee0d-4ddb-a844-cefca10f17ec/arrowdown.png" alt="Arrow" class="arrow">
-                                <img src="https://ucarecdn.com/63d4cd96-1835-48ea-8395-7ef769146f5c/organized.png" alt="Diagram">
+                                <img src="/template/landing_assets/images/avif/icons/arrowdown.avif" alt="Arrow" class="arrow">
+                                <img src="/template/landing_assets/images/avif/icons/organized.avif" alt="Diagram">
                                 <h4>Work Ethic</h4>
                             </div>
                             <div class="desc">
@@ -130,10 +161,10 @@
                         </div>
                         <div class="separator"></div>
                         <h3>Technical Skills</h3>
-                        <div class="item" onclick="toggleExpander(this,document.getElementById('skills'));">
+                        <div class="item active" onclick="toggleExpander(this,document.getElementById('skills'));">
                             <div class="title">
-                                <img src="https://ucarecdn.com/a063a4e9-ee0d-4ddb-a844-cefca10f17ec/arrowdown.png" alt="Arrow" class="arrow">
-                                <img src="https://ucarecdn.com/56610785-5b6b-4153-b2bd-da2db36aef23/computer.png" alt="Monitor">
+                                <img src="/template/landing_assets/images/avif/icons/arrowdown.avif" alt="Arrow" class="arrow">
+                                <img src="/template/landing_assets/images/avif/icons/computer.avif" alt="Monitor">
                                 <h4>Coding & Web Dev</h4>
                             </div>
                             <div class="desc">
@@ -145,10 +176,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item" onclick="toggleExpander(this,document.getElementById('skills'));">
+                        <div class="item active" onclick="toggleExpander(this,document.getElementById('skills'));">
                             <div class="title">
-                                <img src="https://ucarecdn.com/a063a4e9-ee0d-4ddb-a844-cefca10f17ec/arrowdown.png" alt="Arrow" class="arrow">
-                                <img src="https://ucarecdn.com/ea595bb8-eb32-44bb-b5d5-310f43e96c97/word.png" alt="Microsoft Office">
+                                <img src="/template/landing_assets/images/avif/icons/arrowdown.avif" alt="Arrow" class="arrow">
+                                <img src="/template/landing_assets/images/avif/icons/word.avif" alt="Microsoft Office">
                                 <h4>Computer Softwares</h4>
                             </div>
                             <div class="desc">
@@ -163,9 +194,9 @@
                         <div class="separator"></div>
                         <h3>Volunteer Experience</h3>
                         
-                        <div class="item" onclick="toggleExpander(this,document.getElementById('skills'));">
+                        <div class="item active" onclick="toggleExpander(this,document.getElementById('skills'));">
                             <div class="title">
-                                <img src="https://ucarecdn.com/a063a4e9-ee0d-4ddb-a844-cefca10f17ec/arrowdown.png" alt="Arrow" class="arrow">
+                                <img src="/template/landing_assets/images/avif/icons/arrowdown.avif" alt="Arrow" class="arrow">
                                 <h4 class="noicon">The Good Guys</h4>
                                 <p class="subtitle">Treasurer ⋅ Richmond, BC</p>
                             </div>                 
@@ -180,9 +211,9 @@
                             </div>
                         </div>
 
-                        <div class="item" onclick="toggleExpander(this,document.getElementById('skills'));">
+                        <div class="item active" onclick="toggleExpander(this,document.getElementById('skills'));">
                             <div class="title">
-                                <img src="https://ucarecdn.com/a063a4e9-ee0d-4ddb-a844-cefca10f17ec/arrowdown.png" alt="Arrow" class="arrow">
+                                <img src="/template/landing_assets/images/avif/icons/arrowdown.avif" alt="Arrow" class="arrow">
                                 <h4 class="noicon">RMCS</h4>
                                 <p class="subtitle">Receptionist ⋅ Richmond, BC</p>
                             </div>                 
@@ -201,27 +232,27 @@
                 <section id="interests">
                     <ul class="hobbies">
                         <li>
-                            <img src="https://ucarecdn.com/1f15c25f-b9f0-44c7-bbcc-e3c7c95d78da/code.png" alt="Code">
+                            <img src="/template/landing_assets/images/avif/icons/code.avif" alt="Code">
                             <p>Computer Programming</p>
                         </li>
                         <li>
-                            <img src="https://ucarecdn.com/43dd2a9d-a196-4182-9f87-e5a06c9cd8cc/keyboard.png" alt="Keyboard">
+                            <img src="/template/landing_assets/images/avif/icons/keyboard.avif" alt="Keyboard">
                             <p>100+ WPM Typist</p>
                         </li>
                         <li>
-                            <img src="https://ucarecdn.com/0667a2ac-df1f-49f9-9a24-8164a3645e45/graph.png" alt="Graph">
+                            <img src="/template/landing_assets/images/avif/icons/graph.avif" alt="Graph">
                             <p>Mathematics</p>
                         </li>
                         <li>
-                            <img src="https://ucarecdn.com/169a529f-99e8-4f31-8f2e-55274fd299a2/money.png" alt="Money">
+                            <img src="/template/landing_assets/images/avif/icons/money.avif" alt="Money">
                             <p>Economics and Accounting</p>
                         </li>
                         <li>
-                            <img src="https://ucarecdn.com/ea32a2b4-07cd-4ba7-ad11-2360d7e3cfdc/physics.png" alt="Physics">
+                            <img src="/template/landing_assets/images/avif/icons/physics.avif" alt="Physics">
                             <p>Physics</p>
                         </li>
                         <li>
-                            <img src="https://ucarecdn.com/15241418-904c-4113-bdf9-359e37726f89/cityscape.png" alt="Cityscape">
+                            <img src="/template/landing_assets/images/avif/icons/cityscape.avif" alt="Cityscape">
                             <p>Urbanism and Planning</p>
                         </li>
                     </ul>
@@ -230,15 +261,15 @@
                     <table class="languages">
                         <tbody>
                             <tr>
-                                <td class="langflag"><img src="https://ucarecdn.com/ade26a1a-2e86-46d5-9a20-76368ddd7d2f/canada.png" alt="Canada flag"></td>
+                                <td class="langflag"><img src="/template/landing_assets/images/avif/canada.avif" alt="Canada flag"></td>
                                 <td class="langname">English</td>
-                                <td class="langstar"><img src="https://ucarecdn.com/2d02a04f-56c1-481c-8496-bfa8db2324df/45star.png" alt="4.5/5 stars"></td>
+                                <td class="langstar"><img src="/template/landing_assets/images/avif/45star.avif" alt="4.5/5 stars"></td>
                                 <td class="langprof">Advanced</td>
                             </tr>
                             <tr>
-                                <td class="langflag"><img src="https://ucarecdn.com/93eb6e3d-6cfa-4e4e-ae38-a4d4fec3ddfd/thailand.png" alt="Thailand flag"></td>
+                                <td class="langflag"><img src="/template/landing_assets/images/avif/thailand.avif" alt="Thailand flag"></td>
                                 <td class="langname">Thai</td>
-                                <td class="langstar"><img src="https://ucarecdn.com/c1bb205b-602d-4393-bdaa-389cbabb80a0/5star.png" alt="5/5 stars"></td>
+                                <td class="langstar"><img src="/template/landing_assets/images/avif/5star.avif" alt="5/5 stars"></td>
                                 <td class="langprof">Native</td>
                             </tr>
                         </tbody>
@@ -249,30 +280,30 @@
                         <div class="info">
                             <h2>Get in Touch</h2>
                             <div class="item">
-                                <img src="https://ucarecdn.com/35e913d6-2683-4942-8f3a-0737800e112d/mail.png" alt="Mail">
+                                <img src="/template/landing_assets/images/avif/icons/mail.avif" alt="Mail">
                                 <a href="mailto:mu@tinagrit.com">mu@tinagrit.com</a>
                             </div>
                             <div class="item">
-                                <img src="https://ucarecdn.com/87258333-1b00-401b-a76d-a2a655488911/phone.png" alt="Phone">
+                                <img src="/template/landing_assets/images/avif/icons/phone.avif" alt="Phone">
                                 <a href="tel:+17787517531">(778) 751-7531</a>
                             </div>
                             <div class="item">
-                                <img src="https://ucarecdn.com/30068356-c7a1-4254-be72-67e42633df20/location.png" alt="Location">
+                                <img src="/template/landing_assets/images/avif/icons/location.avif" alt="Location">
                                 <p>Burnaby, BC</p>
                             </div>
                         </div>
                         <div class="linkrow">
                             <a href="https://www.linkedin.com/in/mu-leelawat/">
-                                <img src="https://ucarecdn.com/e9fb675d-f020-4ecc-ad58-de20e862bb65/linkedin.png" alt="LinkedIn">
+                                <img src="/template/landing_assets/images/avif/icons/linkedin.avif" alt="LinkedIn">
                             </a>
                             <a href="https://github.com/tinagrit">
-                                <img src="https://ucarecdn.com/0e157d97-d859-4800-a572-4573ad7b4d8a/github.png" alt="GitHub">
+                                <img src="/template/landing_assets/images/avif/icons/github.avif" alt="GitHub">
                             </a>
                             <a href="https://instagram.com/tinagrit">
-                                <img src="https://ucarecdn.com/d34dadaa-6065-40dd-8cc1-8b6e919d140e/instagram.png" alt="Instagram">
+                                <img src="/template/landing_assets/images/avif/icons/instagram.avif" alt="Instagram">
                             </a>    
                             <a href="https://x.com/muneedscaffeine">
-                                <img src="https://ucarecdn.com/f09ef523-3f7e-431f-b329-10ca21b5b08e/twitter.png" alt="Twitter">
+                                <img src="/template/landing_assets/images/avif/icons/twitter.avif" alt="Twitter">
                             </a>
                         </div>
                         <div class="separator"></div>
@@ -280,13 +311,13 @@
 
                     
                     <div class="biglinks">
-                        <a class="item" href="/template/landing_assets/Resume-Web.pdf">
-                            <img src="https://ucarecdn.com/e38d34ca-acd7-41f3-991e-0b31812a165a/download.png" alt="Download">
+                        <a class="item" href="/resume">
+                            <img src="/template/landing_assets/images/avif/icons/download.avif" alt="Download">
                             <p class="label">Download</p>
                             <p class="name">Resume</p>
                         </a>
                         <a class="item" href="https://www.youtube.com/watch?v=BA40CCSUUSQ">
-                            <img src="https://ucarecdn.com/101511d2-417a-4006-ada4-941009990bc9/play.png" alt="Play">
+                            <img src="/template/landing_assets/images/avif/icons/play.avif" alt="Play">
                             <div class="label">Watch my</div>
                             <p class="name">Capstone</p>
                         </a>
@@ -294,16 +325,13 @@
                     
                     <div class="copyright">
                         <p>&copy; muleelawat 2025</p>
-                        <p>v. 1.1</p>
+                        <p>v. 1.4 BETA</p>
                         <p><a href="/template/landing_assets/images/credits.html">Credits for fonts and icons</a></p>
                     </div>
                 </section>
             </div>    
         </div>
     </div>
-    <style>
-        
-    </style>
     <script src="/template/landing_assets/script.js"></script>
 </body>
 </html>
